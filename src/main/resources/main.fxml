@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.collections.*?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.text.TextFlow?>
-<VBox maxHeight="680" maxWidth="480" minHeight="680" minWidth="480" prefHeight="680" prefWidth="480" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="by.bsuir.lab1.controller.Controller">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<VBox maxHeight="900" maxWidth="480" minHeight="900" minWidth="480" prefHeight="900" prefWidth="480"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="by.bsuir.lab1.controller.Controller">
     <children>
         <AnchorPane layoutX="-20.0" prefHeight="216.0" prefWidth="480">
             <children>
                 <Label layoutX="208.0" layoutY="5.0">INPUT</Label>
-                <TextArea fx:id="inputArea" layoutY="24.0" maxWidth="480" minWidth="480" prefHeight="191.0" prefWidth="480.0" wrapText="true" />
+                <TextArea fx:id="inputArea" layoutY="24.0" maxWidth="480" minWidth="480" prefHeight="191.0"
+                          prefWidth="480.0" wrapText="true"/>
             </children>
         </AnchorPane>
         <AnchorPane layoutX="-20.0" prefHeight="216.0" prefWidth="480">
             <children>
                 <Label layoutX="202.0" layoutY="5.0">OUTPUT</Label>
-                <TextArea fx:id="outputArea" editable="false" layoutY="26.0" maxWidth="480" minWidth="480" wrapText="true" />
+                <TextArea fx:id="outputArea" editable="false" layoutY="26.0" maxWidth="480" minWidth="480"
+                          wrapText="true"/>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="-20.0" prefHeight="248.0" prefWidth="480">
+        <AnchorPane layoutX="-20.0" prefHeight="400.0" prefWidth="480">
             <children>
                 <Label layoutX="109.0" layoutY="6.0">CONTROL AND DEBUG</Label>
-                <TextArea fx:id="debugArea" editable="false" layoutY="29.0" maxWidth="341" minWidth="341" wrapText="true" />
-                <Button fx:id="send" layoutX="350.0" layoutY="70.0" onAction="#buttonClicked" text="SEND TEXT" />
-                <Button fx:id="clear" layoutX="350.0" layoutY="111.0" onAction="#clearButtonClicked" text="CLEAR OUTPUT" />
+                <TextArea fx:id="debugArea" editable="false" layoutY="29.0" maxWidth="341" minWidth="341"
+                          wrapText="true"/>
+                <TextArea fx:id="bufferArea" editable="false" layoutY="280" maxWidth="341" minWidth="341" maxHeight="100"
+                          minHeight="100"
+                          wrapText="true"/>
+                <Button fx:id="send" layoutX="350.0" layoutY="70.0" onAction="#buttonClicked" text="SEND TEXT"/>
+                <Button fx:id="clear" layoutX="350.0" layoutY="111.0" onAction="#clearButtonClicked"
+                        text="CLEAR OUTPUT"/>
                 <ChoiceBox fx:id="choiceBox" layoutX="350.0" layoutY="29.0" prefWidth="80.0" value="1200">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="1200" />
-                            <String fx:value="2400" />
-                            <String fx:value="4800" />
-                            <String fx:value="9600" />
-                            <String fx:value="19200" />
-                            <String fx:value="38400" />
-                            <String fx:value="57600" />
-                            <String fx:value="115200" />
+                            <String fx:value="1200"/>
+                            <String fx:value="2400"/>
+                            <String fx:value="4800"/>
+                            <String fx:value="9600"/>
+                            <String fx:value="19200"/>
+                            <String fx:value="38400"/>
+                            <String fx:value="57600"/>
+                            <String fx:value="115200"/>
                         </FXCollections>
                     </items>
                 </ChoiceBox>
